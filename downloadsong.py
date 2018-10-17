@@ -54,7 +54,7 @@ def get_dowloadurl(ids,j):
                         filename=headdict["Content-Disposition"].split(";")[1].split("=")[1]         
                     print str.format("e:/music/{0}",filename)
                     filename=filename.replace('"',"").replace("\r\n","")
-                    a=open(str.format("e:/music/{0}",filename),"wb")
+                    a=open(str.format("{1}/{0}",filename),"wb",__file__)
                     a.write(b)            
                     a.close()
                     print "下载完成第%d首歌曲" %(j)
