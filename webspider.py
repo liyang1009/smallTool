@@ -115,10 +115,9 @@ class Execute():
 		
 if __name__=='__main__':
 	if host:
-		"""m = re.search('http://(.)+\.(.)\.(.)+[\/]?',host)	
-		if m:
-			firsthost=m.group(2)"""
-		execute=Execute(2,3,host)
+		parse_thread_count = int(input("parse_thread_count"))
+		net_thread_count = int(input("net_thread_count"))
+		execute=Execute(parse_thread_count,net_thread_count,host)
 		execute.exe();
 		content.join()
 		queue.join()
